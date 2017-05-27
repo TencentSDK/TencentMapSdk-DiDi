@@ -1,0 +1,16 @@
+PODS:
+  - TencentMapSdk-DiDi (2.1.1.07.01.01)
+
+DEPENDENCIES:
+  - TencentMapSdk-DiDi (from `../`)
+
+EXTERNAL SOURCES:
+  TencentMapSdk-DiDi:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TencentMapSdk-DiDi: 786e9a238f1616a7f2916f210bb89aa3a4e21b28
+
+PODFILE CHECKSUM: 0f15e621b006526dc6f29e90cbe40c60253da647
+
+COCOAPODS: 1.2.1
