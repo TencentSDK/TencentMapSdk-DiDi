@@ -17,7 +17,7 @@ s.homepage         = "https://github.com/TencentSDK/TencentMapSdk-DiDi"
 # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
 s.license          = 'BSD'
 s.author           = { "eximpression" => "ex_impression@hotmail.com" }
-s.source           = { :git => "https://github.com/TencentSDK/TencentMapSdk-DiDi", :tag => s.version.to_s }
+s.source           = { :git => "https://github.com/TencentSDK/TencentMapSdk-DiDi.git", :tag => s.version.to_s }
 # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
 s.platform     = :ios, '7.0'
@@ -29,7 +29,7 @@ s.resources = 'TencentMapSdk-DiDi/Bundles/SOSOMAPRES.bundle'
 s.vendored_libraries = [
 'TencentMapSdk-DiDi/Library/libSOSOMAP.a'
 ]
-s.public_header_files = 'TencentMapSdk-DiDi/Classes/QMap/include/*.h'
+s.public_header_files = 'TencentMapSdk-DiDi/Classes/include/*.h'
 s.frameworks = 'SystemConfiguration','UIKit','CoreText','OpenGLES','QuartzCore','CoreGraphics','CoreLocation','CoreTelephony', 'Accelerate','ImageIO','JavaScriptCore'
 s.ios.vendored_frameworks = 'TencentMapSdk-DiDi/Framework/TMapBeaconAPI_SDKBase.framework'
 s.library = 'z','stdc++','stdc++.6.0.9','sqlite3'
