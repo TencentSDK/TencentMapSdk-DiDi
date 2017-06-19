@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 s.name             = "TencentMapSdk-DiDi"
 #2.1.1.07表示版本号, 倒数第二位01 表示乘客, 02 表示专快司机, 03表示出租车司机, 最后一位每次同一版本有新的提交则+1,类似Build号
-s.version          = "2.1.1.07.01.02"
+s.version          = "2.1.1.07.01.03"
 s.summary          = "This is TencentMapSdk for DiDi."
 s.description      = 'The Map Software develop kit.'
 s.homepage         = "https://github.com/TencentSDK/TencentMapSdk-DiDi"
