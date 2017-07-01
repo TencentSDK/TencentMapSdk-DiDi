@@ -174,6 +174,21 @@
  */
 - (void) setCompassYOffSet:(CGFloat)yOffset;
 
+/*
+ * 当前地图的旋转角度
+ */
+@property(nonatomic, assign)CGFloat rotation;
+
+/*
+ * 当前地图的俯视角度,0 ~ 45
+ */
+@property(nonatomic, assign)CGFloat overlooking;
+
+/*
+ * 设置地图的旋转角度与俯视角度
+ */
+-(void)setRotation:(CGFloat)rotation overlooking:(CGFloat)overlooking animated:(BOOL)animated;
+
 /**
  * 显示自定义的路况数据
  * @param trafficData 路况数据
