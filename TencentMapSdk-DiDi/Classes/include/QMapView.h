@@ -1446,6 +1446,8 @@ automaticAjustVisibleMapRect:(BOOL)automaticAjustVisibleMapRect;
 
 @end
 
+typedef void(^CallDIDILogBlock)(NSString *logStr);
+
 @interface QMapView (RouteNavigation)
 
 /*
@@ -1610,6 +1612,8 @@ automaticAjustVisibleMapRect:(BOOL)automaticAjustVisibleMapRect;
  * 设置导航面板顶部遮盖地图的高度，在导航界面元素发生变化时（比如路口放大图，车道线，电子眼实景图显示和隐藏）需要调用该方法
  */
 - (void)setTopNaviBarHeight:(CGFloat)height;
+
+- (void)setCallDiDiLogBlock:(CallDIDILogBlock)logBlock;
 
 @end
 /**
