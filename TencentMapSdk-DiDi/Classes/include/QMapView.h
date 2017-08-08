@@ -90,6 +90,11 @@
 @property(nonatomic, assign) BOOL showsCompass;
 
 /**
+ 调整地图重绘的帧率，默认为1
+ */
+@property(nonatomic, assign) NSInteger frameInterval;
+
+/**
  * 设置地图语言
  */
 @property(nonatomic, assign) QMapLanguage mapLanguage;
