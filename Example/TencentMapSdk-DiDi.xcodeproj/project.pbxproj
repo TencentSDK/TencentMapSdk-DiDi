@@ -22,6 +22,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D41E3ACF1F4AD4570011BB5C /* QMapNaviDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41E3ACE1F4AD4570011BB5C /* QMapNaviDemoViewController.m */; };
 		D4456B701ED97C03005AB1C0 /* QMapBaseDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4456B6F1ED97C03005AB1C0 /* QMapBaseDemoViewController.m */; };
 		D4456B731ED97C54005AB1C0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4456B711ED97C54005AB1C0 /* MasterViewController.m */; };
 		D4456B791ED983EF005AB1C0 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4456B781ED983EF005AB1C0 /* WebP.framework */; };
@@ -63,6 +64,8 @@
 		78DD73A8441F203B1ABD35B1 /* Pods-TencentMapSdk-DiDi_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TencentMapSdk-DiDi_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TencentMapSdk-DiDi_Tests/Pods-TencentMapSdk-DiDi_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC6F48F120043FCF4D2808F2 /* libPods-TencentMapSdk-DiDi_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TencentMapSdk-DiDi_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41E3ACD1F4AD4570011BB5C /* QMapNaviDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMapNaviDemoViewController.h; sourceTree = "<group>"; };
+		D41E3ACE1F4AD4570011BB5C /* QMapNaviDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMapNaviDemoViewController.m; sourceTree = "<group>"; };
 		D4456B6E1ED97C03005AB1C0 /* QMapBaseDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMapBaseDemoViewController.h; sourceTree = "<group>"; };
 		D4456B6F1ED97C03005AB1C0 /* QMapBaseDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMapBaseDemoViewController.m; sourceTree = "<group>"; };
 		D4456B711ED97C54005AB1C0 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				D4456B6D1ED97C03005AB1C0 /* BaseDemo */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				D41E3ACC1F4AD4570011BB5C /* NaviDemo */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -191,6 +195,15 @@
 				2AE2FE2B3E78A8322328B01B /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		D41E3ACC1F4AD4570011BB5C /* NaviDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D41E3ACD1F4AD4570011BB5C /* QMapNaviDemoViewController.h */,
+				D41E3ACE1F4AD4570011BB5C /* QMapNaviDemoViewController.m */,
+			);
+			path = NaviDemo;
 			sourceTree = "<group>";
 		};
 		D4456B6D1ED97C03005AB1C0 /* BaseDemo */ = {
@@ -422,6 +435,7 @@
 				D4456B731ED97C54005AB1C0 /* MasterViewController.m in Sources */,
 				6003F59E195388D20070C39A /* QMapAppDelegate.m in Sources */,
 				D4456B701ED97C03005AB1C0 /* QMapBaseDemoViewController.m in Sources */,
+				D41E3ACF1F4AD4570011BB5C /* QMapNaviDemoViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

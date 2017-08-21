@@ -14,7 +14,7 @@
 {
     // Override point for customization after application launch.
     // Override point for customization after application launch.
-    self.appKeyCheck = [[QAppKeyCheck alloc] init];
+    self.appKeyCheck = [[QAppKeyCheck alloc] initWithDidiTypeFlag:QMapDidiTypeSpecialDriver];
     
     
     [_appKeyCheck start:@"YOUR APP KEY" withDelegate:self];

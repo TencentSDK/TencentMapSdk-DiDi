@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     
-    self.menuList = @[@"基本地图功能"];
+    self.menuList = @[@"基本地图功能",@"地图导航功能"];
 }
 
 
@@ -38,6 +38,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ShowBaseDemoIdentifier"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSString *object = self.menuList[indexPath.row];
+        UIViewController *controller =[segue destinationViewController];
+        controller.title = object;
+    }
+    if ([[segue identifier] isEqualToString:@"ShowNaviDemoIdentifier"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSString *object = self.menuList[indexPath.row];
         UIViewController *controller =[segue destinationViewController];
@@ -75,6 +81,9 @@
     switch (indexPath.row) {
         case 0:
             [self performSegueWithIdentifier:@"ShowBaseDemoIdentifier" sender:nil];
+            break;
+        case 1:
+            [self performSegueWithIdentifier:@"ShowNaviDemoIdentifier" sender:nil];
             break;
         default:
             break;

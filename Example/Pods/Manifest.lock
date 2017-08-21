@@ -1,5 +1,5 @@
 PODS:
-  - TencentMapSdk-DiDi (2.1.1.07.01.01)
+  - TencentMapSdk-DiDi (2.1.1.09.02.02)
 
 DEPENDENCIES:
   - TencentMapSdk-DiDi (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TencentMapSdk-DiDi: 786e9a238f1616a7f2916f210bb89aa3a4e21b28
+  TencentMapSdk-DiDi: b3f20ee160d1db0270ed6f7e6d77821f93a01ea8
 
 PODFILE CHECKSUM: 0f15e621b006526dc6f29e90cbe40c60253da647
 
