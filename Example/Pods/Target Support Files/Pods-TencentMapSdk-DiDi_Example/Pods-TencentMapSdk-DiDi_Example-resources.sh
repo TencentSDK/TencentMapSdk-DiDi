@@ -80,10 +80,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "../../TencentMapSdk-DiDi/Bundles/SOSOMAPRESSPECIALDRIVER.bundle"
+  install_resource "../../TencentMapSdk-DiDi/Bundles/SOSOMAPRES.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "../../TencentMapSdk-DiDi/Bundles/SOSOMAPRESSPECIALDRIVER.bundle"
+  install_resource "../../TencentMapSdk-DiDi/Bundles/SOSOMAPRES.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

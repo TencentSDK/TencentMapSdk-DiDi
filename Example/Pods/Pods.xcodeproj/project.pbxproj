@@ -118,6 +118,7 @@
 		28583B4A02889E92D38D1EE0BACBA083 /* Pods-TencentMapSdk-DiDi_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TencentMapSdk-DiDi_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2DBAD81F49A970D53E1E3743A69866DB /* QUserLocationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = QUserLocationView.h; sourceTree = "<group>"; };
 		31AFBBFD8B16B39703610E66766FB221 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3333ADA755B2B7DBEA88FB6D1773D9EA /* SOSOMAPRES.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = SOSOMAPRES.bundle; sourceTree = "<group>"; };
 		352E129B901CED3CD0682CE4BCEE21BC /* libSOSOMAP.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSOSOMAP.a; path = "TencentMapSdk-DiDi/Library/libSOSOMAP.a"; sourceTree = "<group>"; };
 		38048549A7B903933FEC3BD638406ECA /* QMRoute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = QMRoute.h; sourceTree = "<group>"; };
 		3BDB19DE172AA91D5C3F0C44F4C4FDF5 /* Pods-TencentMapSdk-DiDi_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TencentMapSdk-DiDi_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -129,7 +130,6 @@
 		4F828300B77101146BC8201BAA828444 /* Pods-TencentMapSdk-DiDi_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TencentMapSdk-DiDi_Tests-resources.sh"; sourceTree = "<group>"; };
 		4FF5D0CF073AB2CF4AA009A1C565C9B4 /* QReverseGeocoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = QReverseGeocoder.h; sourceTree = "<group>"; };
 		5248543A47909F2F2E82B4E332E6F6B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		52783A9AEE2CEF6F8BFF36A468D077D8 /* SOSOMAPRESSPECIALDRIVER.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = SOSOMAPRESSPECIALDRIVER.bundle; sourceTree = "<group>"; };
 		56625DDFAAEEF1371EBFEAEEAA174333 /* QTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = QTypes.h; sourceTree = "<group>"; };
 		59FD4CE58CE146255B1F31B51022CD35 /* Pods-TencentMapSdk-DiDi_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TencentMapSdk-DiDi_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6050694166DAC5D1B0D812518188C822 /* Pods-TencentMapSdk-DiDi_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TencentMapSdk-DiDi_Example-resources.sh"; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 		1B48D42EB67D6E189091474ABF2782CE /* TencentMapSdk-DiDi */ = {
 			isa = PBXGroup;
 			children = (
-				B68EF37B40C0ADDC0B4103FDCE8D7CF3 /* Bundles */,
+				35182EA67D347AA8967F3F001A6C7B16 /* Bundles */,
 			);
 			name = "TencentMapSdk-DiDi";
 			path = "TencentMapSdk-DiDi";
@@ -270,6 +270,15 @@
 				31AFBBFD8B16B39703610E66766FB221 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		35182EA67D347AA8967F3F001A6C7B16 /* Bundles */ = {
+			isa = PBXGroup;
+			children = (
+				3333ADA755B2B7DBEA88FB6D1773D9EA /* SOSOMAPRES.bundle */,
+			);
+			name = Bundles;
+			path = Bundles;
 			sourceTree = "<group>";
 		};
 		393F49B25EE944C14A83D361EA187FFE /* Resources */ = {
@@ -407,15 +416,6 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/TencentMapSdk-DiDi";
-			sourceTree = "<group>";
-		};
-		B68EF37B40C0ADDC0B4103FDCE8D7CF3 /* Bundles */ = {
-			isa = PBXGroup;
-			children = (
-				52783A9AEE2CEF6F8BFF36A468D077D8 /* SOSOMAPRESSPECIALDRIVER.bundle */,
-			);
-			name = Bundles;
-			path = Bundles;
 			sourceTree = "<group>";
 		};
 		C453840A24FA35AC5323190DE3938555 /* Targets Support Files */ = {

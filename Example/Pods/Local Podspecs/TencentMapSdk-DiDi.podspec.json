@@ -1,6 +1,6 @@
 {
   "name": "TencentMapSdk-DiDi",
-  "version": "2.1.1.09.02.02",
+  "version": "2.1.1.09.01.02",
   "summary": "This is TencentMapSdk for DiDi.",
   "description": "The Map Software develop kit.",
   "homepage": "https://github.com/TencentSDK/TencentMapSdk-DiDi",
@@ -10,14 +10,14 @@
   },
   "source": {
     "git": "https://github.com/TencentSDK/TencentMapSdk-DiDi.git",
-    "tag": "2.1.1.09.02.02"
+    "tag": "2.1.1.09.01.02"
   },
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
   "source_files": "TencentMapSdk-DiDi/Classes/**/*",
-  "resources": "TencentMapSdk-DiDi/Bundles/SOSOMAPRESSPECIALDRIVER.bundle",
+  "resources": "TencentMapSdk-DiDi/Bundles/SOSOMAPRES.bundle",
   "vendored_libraries": [
     "TencentMapSdk-DiDi/Library/libSOSOMAP.a"
   ],
