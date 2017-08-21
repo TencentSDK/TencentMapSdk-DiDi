@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G4m-BF-CAT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G4m-BF-CAT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,6 +35,7 @@
                     <navigationItem key="navigationItem" id="olC-3b-9Bd"/>
                     <connections>
                         <segue destination="4Ee-65-Ojf" kind="show" identifier="ShowBaseDemoIdentifier" id="11B-6J-NRs"/>
+                        <segue destination="eBu-UL-ZIt" kind="show" identifier="ShowNaviDemoIdentifier" id="uUn-Y4-SZn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCK-KP-IRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,6 +96,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTH-U8-iPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="452.92353823088462"/>
+        </scene>
+        <!--Delegate-->
+        <scene sceneID="obx-Eb-l9a">
+            <objects>
+                <viewController id="eBu-UL-ZIt" customClass="QMapNaviDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0dA-70-Hd8"/>
+                        <viewControllerLayoutGuide type="bottom" id="sGf-RA-gGn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G8f-Qt-SxD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agj-gg-BJA" customClass="QMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oo5-BT-tPK">
+                                        <rect key="frame" x="8" y="8" width="77" height="30"/>
+                                        <state key="normal" title="途经点算路"/>
+                                        <connections>
+                                            <action selector="calculateRouteWithPasses:" destination="eBu-UL-ZIt" eventType="touchUpInside" id="a8q-Qx-GXP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fV4-lw-72Z">
+                                        <rect key="frame" x="105" y="8" width="62" height="30"/>
+                                        <state key="normal" title="开始导航"/>
+                                        <connections>
+                                            <action selector="startNaviAction:" destination="eBu-UL-ZIt" eventType="touchUpInside" id="XcO-Kw-Ufo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZY-r7-NzT">
+                                        <rect key="frame" x="187" y="8" width="62" height="30"/>
+                                        <state key="normal" title="停止导航"/>
+                                        <connections>
+                                            <action selector="stopNaviAction:" destination="eBu-UL-ZIt" eventType="touchUpInside" id="N3G-Ky-9CI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW0-8C-Bda">
+                                        <rect key="frame" x="8" y="58" width="62" height="30"/>
+                                        <state key="normal" title="继续导航"/>
+                                        <connections>
+                                            <action selector="continueNaviAction:" destination="eBu-UL-ZIt" eventType="touchUpInside" id="xB5-H4-OpI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fV4-lw-72Z" firstAttribute="baseline" secondItem="Oo5-BT-tPK" secondAttribute="baseline" id="5kh-tT-YHd"/>
+                                    <constraint firstItem="fV4-lw-72Z" firstAttribute="leading" secondItem="Oo5-BT-tPK" secondAttribute="trailing" constant="20" id="8zY-jX-Mjc"/>
+                                    <constraint firstItem="Oo5-BT-tPK" firstAttribute="leading" secondItem="agj-gg-BJA" secondAttribute="leading" constant="8" id="ATI-ut-fWQ"/>
+                                    <constraint firstItem="dZY-r7-NzT" firstAttribute="leading" secondItem="fV4-lw-72Z" secondAttribute="trailing" constant="20" id="H3C-xY-Txf"/>
+                                    <constraint firstItem="hW0-8C-Bda" firstAttribute="top" secondItem="Oo5-BT-tPK" secondAttribute="bottom" constant="20" id="Ja4-9x-BYF"/>
+                                    <constraint firstItem="hW0-8C-Bda" firstAttribute="leading" secondItem="Oo5-BT-tPK" secondAttribute="leading" id="Xhy-eQ-UMD"/>
+                                    <constraint firstItem="Oo5-BT-tPK" firstAttribute="top" secondItem="agj-gg-BJA" secondAttribute="top" constant="8" id="atk-pv-vYM"/>
+                                    <constraint firstItem="dZY-r7-NzT" firstAttribute="baseline" secondItem="fV4-lw-72Z" secondAttribute="baseline" id="lwG-dI-O21"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="eBu-UL-ZIt" id="jDA-7s-3KI"/>
+                                    <outlet property="navDelegate" destination="eBu-UL-ZIt" id="Fd3-Qd-ilr"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="agj-gg-BJA" secondAttribute="trailing" id="4UO-3Z-fZG"/>
+                            <constraint firstItem="sGf-RA-gGn" firstAttribute="top" secondItem="agj-gg-BJA" secondAttribute="bottom" id="V9Q-oj-ZK3"/>
+                            <constraint firstItem="agj-gg-BJA" firstAttribute="leading" secondItem="G8f-Qt-SxD" secondAttribute="leading" id="rgK-rb-D3y"/>
+                            <constraint firstItem="agj-gg-BJA" firstAttribute="top" secondItem="0dA-70-Hd8" secondAttribute="bottom" id="utO-CG-mQf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapview" destination="agj-gg-BJA" id="aIz-Ye-T0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ZK-Gu-tMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2164" y="702"/>
         </scene>
     </scenes>
 </document>
