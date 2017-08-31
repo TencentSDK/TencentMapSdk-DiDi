@@ -90,6 +90,11 @@
 @property(nonatomic, assign) BOOL showsCompass;
 
 /**
+ 调整地图重绘的帧率，默认为1
+ */
+@property(nonatomic, assign) NSInteger frameInterval;
+
+/**
  * 设置地图语言
  */
 @property(nonatomic, assign) QMapLanguage mapLanguage;
@@ -1446,8 +1451,6 @@ automaticAjustVisibleMapRect:(BOOL)automaticAjustVisibleMapRect;
 
 @end
 
-typedef void(^CallDIDILogBlock)(NSString *logStr);
-
 @interface QMapView (RouteNavigation)
 
 /*
@@ -1519,6 +1522,16 @@ typedef void(^CallDIDILogBlock)(NSString *logStr);
  * 获取路线类型为type的路线的剩余显示区域，在司乘同显擦除模式中应用
  */
 - (QMapRect)getRouteLineLeftVisibleRect:(int)type;
+
+/**
+ 获取途经点最佳视野
+ 
+ @param routeGroupType 获取最佳视野的type
+ @param fromIndex 起点0，第一个途经点为1，以此类推，如果当前位置，fromIndex传-1
+ @param toIndex 与fromIndex相同,>= fromIndex
+ @return 最佳视野
+ */
+-(QMapRect)getRouteLineLeftVisibleRect:(int)routeGroupType fromIndex:(NSInteger) fromIndex toIndex:(NSInteger)toIndex;
 
 /*
  * 获取路线类型为type的路线的可见区域
@@ -1613,7 +1626,17 @@ typedef void(^CallDIDILogBlock)(NSString *logStr);
  */
 - (void)setTopNaviBarHeight:(CGFloat)height;
 
-- (void)setCallDiDiLogBlock:(CallDIDILogBlock)logBlock;
+/** 返回当前吸附点到途径点的距离，如果途径点已经走过,或者途径点索引无效，则返回-1
+ * @param passPointIndex 途径点的索引
+ * @return 当前吸附点到途径点的距离，单位：米
+ */
+- (int)distanceToPassPoint:(int)passPointIndex;
+
+/** 返回当前吸附点到途径点的时间，如果途径点已经走过，或者途径点索引无效，则返回-1
+ * @param passPointIndex 途径点的索引
+ * @return 当前吸附点到途径点的时间，单位：秒
+ */
+- (int)remainTimeToPassPoint:(int)passPointIndex;
 
 @end
 /**
