@@ -1638,6 +1638,10 @@ automaticAjustVisibleMapRect:(BOOL)automaticAjustVisibleMapRect;
  */
 - (int)remainTimeToPassPoint:(int)passPointIndex;
 
+/** 返回与当前点最近的下一个途径点的索引，如果途径点数组为空，或者已经经过了所有的途径点，或者当前点没有吸附上，则返回-1
+ */
+- (int)nextPassPointIndex;
+
 @end
 /**
  *QMapViewDelegate:MapView的Delegate,mapView通过此类来通知用户对应的事件
