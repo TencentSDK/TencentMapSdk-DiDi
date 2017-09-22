@@ -1058,6 +1058,20 @@
  */
 @property(nonatomic, assign) QMapNaviDayNightMode naviDayNightMode;
 
+/**
+ * 自设置途径点特性开关，默认为NO, 在导航开始之前设置
+ * 如果为YES，则经过途径点后由使用方调用- (void)userReachedPassPoint:(NSInteger)passPointIndex接口来设置已经走过的途径点标记，同时偏航策略会使用针对途经点的特殊偏航策略
+ * 如果为NO，则经过途经点后导航内部会去设置已经经过的途径点标记，同时偏航策略使用正常的偏航策略
+ */
+@property (nonatomic, assign) BOOL passPointFeatureEnabled;
+
+/**
+ * 设置经过的途经点
+ * @param passPoingIndex 已经经过的途径点索引，如果索引无效，或者passPointFeatureEnabled属性为NO，则该方法不生效
+ */
+- (void)userReachedPassPoint:(NSInteger)passPointIndex;
+
+
 #pragma mark - Route
 
 /**
